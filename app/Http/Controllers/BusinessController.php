@@ -23,6 +23,7 @@ class BusinessController extends Controller
     }
 
     public function contactForm(Request $request){
-        return view('contact-post', ['data' => $request]);
+        // return view('contact-post', ['data' => $request]);
+        return view('contact', ['data' => $request]);
     }
 }

@@ -56,6 +56,20 @@
                             <h2 class="section-heading mb-5">
                                 <span class="section-heading-upper">Leave us a message</span>
                             </h2>
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- * * SB Forms Contact Form * *-->
+                            <!-- * * * * * * * * * * * * * * *-->
+                            <!-- This form is pre-integrated with SB Forms.-->
+                            <!-- To make this form functional, sign up at-->
+                            <!-- https://startbootstrap.com/solution/contact-forms-->
+                            <!-- to get an API token!-->
+                            @isset($data)
+                            <strong>Name :</strong> {{ $data->name ?? ''}} <br>
+                            <strong>Phone :</strong> {{ $data->phone ?? '' }} <br>
+                            <strong>Email :</strong> {{ $data->email ?? '' }} <br>
+                            <strong>Message :</strong> {{ $data->message ?? '' }} <br>
+                            @else
+
                             <form method="post">
                                 @csrf
                                 <div class="form-floating">
@@ -100,6 +114,7 @@
                                 <!-- Submit Button-->
                                 <button class="btn btn-primary text-uppercase"  type="submit">Send</button>
                             </form>
+                            @endisset
                         </div>
 
                     </div>
